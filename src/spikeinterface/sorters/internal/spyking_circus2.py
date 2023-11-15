@@ -50,7 +50,9 @@ class Spykingcircus2Sorter(ComponentsBasedSorter):
         from spikeinterface.sortingcomponents.matching import find_spikes_from_templates
 
         job_kwargs = params["job_kwargs"].copy()
+        print(f'Job kwargs before fix:\n{job_kwargs}\n')
         job_kwargs = fix_job_kwargs(job_kwargs)
+        print(f'Job kwargs after fix:\n{job_kwargs}\n')
         job_kwargs["verbose"] = verbose
         job_kwargs["progress_bar"] = verbose
 
