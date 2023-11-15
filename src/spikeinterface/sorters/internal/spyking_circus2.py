@@ -53,6 +53,7 @@ class Spykingcircus2Sorter(ComponentsBasedSorter):
         print(f'Job kwargs before fix:\n{job_kwargs}\n')
         job_kwargs = fix_job_kwargs(job_kwargs)
         print(f'Job kwargs after fix:\n{job_kwargs}\n')
+        exit()
         job_kwargs["verbose"] = verbose
         job_kwargs["progress_bar"] = verbose
 
