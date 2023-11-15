@@ -166,6 +166,8 @@ def run_sorter_local(
 
     SorterClass = sorter_dict[sorter_name]
 
+    print(f'Initial sorter params:\n{sorter_params}\n')
+
     # only classmethod call not instance (stateless at instance level but state is in folder)
     output_folder = SorterClass.initialize_folder(recording, output_folder, verbose, remove_existing_folder)
     SorterClass.set_params_to_folder(recording, output_folder, sorter_params, verbose)
